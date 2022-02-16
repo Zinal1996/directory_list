@@ -4,9 +4,7 @@ function DirList(props) {
   const dirPath = props.dirPath;
   const command = props.command;
   const currentSplitDir = dirPath.split("/");
-
   const commandString = command.replace("cd ", "");
-
   commandString.split("../").forEach((character) => {
     character !== "" ? currentSplitDir.push(character) : currentSplitDir.pop();
   });
